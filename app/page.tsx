@@ -71,11 +71,19 @@ export default function Home() {
         }),
       });
 
-      if (!response.ok) {
+if (!response.ok) {
         throw new Error('Failed to evaluate answer');
       }
 
-      const data: Evaluation = await response.json();
+      const rawData = await response.json();
+      
+      // Map the backend's JSON structure to the frontend's Evaluation interface
+      const data: Evaluation = {
+        isCorrect: rawData.is_correct,
+        feedback: rawData.feedback_title,
+        studyTip: `${rawData.explanation} ${rawData.misconception_check}`
+      };
+      
       setEvaluation(data);
       setAnswers((prev) => [...prev, data.isCorrect]);
       setQuizState('feedback');

@@ -1,4 +1,13 @@
-export const quizDatabase = [
+export interface Question {
+  id: number;
+  topic: string;
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  explanation: string;
+}
+
+export const quizQuestions: Question[] = [
   {
     id: 1,
     topic: "Describe Cloud Concepts",
@@ -9,7 +18,8 @@ export const quizDatabase = [
       "Fixed pricing",
       "Reserved instances"
     ],
-    correctAnswer: "Operational Expenditure (OpEx)"
+    correctAnswer: 1,
+    explanation: "OpEx allows you to pay as you go, removing the need for upfront capital costs (CapEx) for physical infrastructure."
   },
   {
     id: 2,
@@ -21,7 +31,8 @@ export const quizDatabase = [
       "Azure Virtual Machine Scale Sets",
       "Azure Load Balancer"
     ],
-    correctAnswer: "Availability Zones"
+    correctAnswer: 1,
+    explanation: "Availability Zones are physically separate datacenters within an Azure region, protecting applications from datacenter-level failures."
   },
   {
     id: 3,
@@ -33,7 +44,8 @@ export const quizDatabase = [
       "Infrastructure as a Service (IaaS)",
       "Database as a Service (DBaaS)"
     ],
-    correctAnswer: "Infrastructure as a Service (IaaS)"
+    correctAnswer: 2,
+    explanation: "In an IaaS model, the cloud provider manages the hardware, but the customer is responsible for OS configuration, networking, and applications."
   },
   {
     id: 4,
@@ -45,7 +57,8 @@ export const quizDatabase = [
       "Azure Active Directory (Entra ID)",
       "Azure Advisor"
     ],
-    correctAnswer: "Azure Resource Manager (ARM)"
+    correctAnswer: 0,
+    explanation: "Azure Resource Manager (ARM) is the deployment and management service for Azure, allowing you to manage resources in groups."
   },
   {
     id: 5,
@@ -57,6 +70,7 @@ export const quizDatabase = [
       "Azure Front Door",
       "Azure Traffic Manager"
     ],
-    correctAnswer: "Azure ExpressRoute"
+    correctAnswer: 1,
+    explanation: "Azure ExpressRoute provides a private, dedicated connection to Azure datacenters, bypassing the public internet for higher security and reliability."
   }
 ];
