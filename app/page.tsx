@@ -509,3 +509,27 @@ import { QuizInterface } from '@/pages/QuizInterface';
 import { Results } from '@/pages/Results';
 import { Resources } from '@/pages/Resources';
 import type { CategoryId, QuizConfiguration, QuizResult } from '@/types';
+function App() {
+  const [currentPage, setCurrentPage] = useState<Page>('dashboard');
+  const [preselectedCategory, setPreselectedCategory] = useState<CategoryId | null>(null);
+  const [quizConfig, setQuizConfig] = useState<QuizConfiguration | null>(null);
+  const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
+
+  const handleNavigate = useCallback((page: Page) => {
+    setCurrentPage(page);
+  }, []);
+
+  const handleSelectCategory = useCallback((categoryId: string) => {
+    setPreselectedCategory(categoryId as CategoryId);
+  }, []);
+
+  const handleStartQuiz = useCallback((config: QuizConfiguration) => {
+    setQuizConfig(config);
+    setCurrentPage('quiz');
+  }, []);
+
+  const handleQuizComplete = useCallback((result: QuizResult) => {
+    setQuizResult(result);
+    setCurrentPage('results');
+  }, []);
+
