@@ -1,3 +1,4 @@
+'use client'
 import { useState, useCallback } from 'react';
 import { Header } from '@/components/Header';
 import type { Page } from '@/components/Header';
