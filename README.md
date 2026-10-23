@@ -15,32 +15,6 @@ and strengthen understanding before attempting a certification examination.
 > It is not affiliated with, endorsed by, or sponsored by Microsoft.
 > Microsoft Azure and AZ-900 are referenced for educational purposes.
 
----
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Problem Statement](#problem-statement)
-- [Our Solution](#our-solution)
-- [Project Objectives](#project-objectives)
-- [Learning Areas](#learning-areas)
-- [Planned Features](#planned-features)
-- [How It Works](#how-it-works)
-- [Technology Stack](#technology-stack)
-- [Project Architecture](#project-architecture)
-- [Getting Started](#getting-started)
-- [Development Workflow](#development-workflow)
-- [Content Quality and Learning Integrity](#content-quality-and-learning-integrity)
-- [Testing and Quality Assurance](#testing-and-quality-assurance)
-- [Project Status](#project-status)
-- [Future Improvements](#future-improvements)
-- [Learning Resources](#learning-resources)
-- [Contributing](#contributing)
-- [Team](#team)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
-
----
 
 ## Project Overview
 
