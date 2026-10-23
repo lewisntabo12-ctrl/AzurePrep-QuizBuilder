@@ -498,3 +498,14 @@ function Disclaimer() {
     </footer>
   );
 }
+
+import { useState, useCallback } from 'react';
+import { Header } from '@/components/Header';
+import type { Page } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Dashboard } from '@/pages/Dashboard';
+import { QuizSetup } from '@/pages/QuizSetup';
+import { QuizInterface } from '@/pages/QuizInterface';
+import { Results } from '@/pages/Results';
+import { Resources } from '@/pages/Resources';
+import type { CategoryId, QuizConfiguration, QuizResult } from '@/types';
